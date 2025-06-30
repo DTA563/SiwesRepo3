@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ancizar+Serif:ital,wght@0,300..900;1,300..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/details.css">
+    <title>Siwes Portal Upload</title>
+</head>
+<body>
+    <nav>
+        <img src="/image/babcock-university-logo.png" alt="babcock_logo">
+        <h1>Welcome to the SIWES Portal</h1>
+    </nav>
+
+    <form action="/submit-form" method="post">
+        <h3>School information</h3>
+        <div class="form-row">
+            <div class="second">
+                <label for="school-name">School Name:</label>
+                <select name="schoolid" id="school-id" required>
+                    <option value="0"></option>
+                    <%schools.forEach((item)=>{%>
+                        <option value="<%=item.id%>">
+                            <%=item.name%>
+                        </option>
+                    <%});%>
+                </select>
+            </div>
+
+            <div class="second">
+                <label for="department-name">Department Name:</label>
+                <select name="departmentid" id="department-id" required>
+                    <option value="0"></option>                       
+                </select>
+            </div>
+
+            <div class="second">
+                
+            </div>
+
+            <div class="second">
+                <br>
+            </div>
+        </div>
+
+        <h3>Company information</h3>
+        <div class="form-row number3">
+            <div class="second">
+                <label for="company-name">Company Name:</label>
+                <input type="text" id="company-name" name="companyName" required><br>
+            </div>
+
+            <div class="second">
+                <label for="company-address">Company address:</label>
+                <input type="text" id="company-address" name="companyAddress" required><br>
+            </div>
+
+            <div class="second">
+                <label for="date-started">Date Started:</label>
+                <input type="date" id="date-started" name="dateStarted" required>
+            </div>
+
+            <div class="second">
+                <label for="date-ended">Date Ended:</label>
+                <input type="date" id="date-ended" name="dateEnded" required><br>
+            </div>
+        </div>
+
+        <div class="buttons">
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </div>
+    </form>
+    <a href="/home">
+        <button id="home">Home Page</button>
+    </a>
+
+    <script src="/js/details.js"></script>
+</body>
+</html>

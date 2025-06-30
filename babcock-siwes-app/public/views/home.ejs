@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ancizar+Serif:ital,wght@0,300..900;1,300..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/home.css">
+    <title>Home Page</title>
+</head>
+<body>
+    <img src="/image/babcock-university-logo.png" alt="babcock_logo">
+    <h1>Welcome</h1>
+
+    <div class="search">
+        <p>Search with your first/last Name or Matric/No to find your details.</p>
+        <form action="/search" method="get">
+            <input type="search" name="search" id="search" placeholder="Enter first name or matric/No">
+            <button type="submit">Search</button>
+        </form>
+    </div>
+
+    <div class="details">
+        <p>To input your details please click the link <a href="/details">Siwes Portal Upload</a></p>
+        <p><a href="/logout">Logout</a></p>
+    </div>
+</body>
+</html>

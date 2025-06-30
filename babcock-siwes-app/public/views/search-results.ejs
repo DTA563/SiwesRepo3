@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ancizar+Serif:ital,wght@0,300..900;1,300..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/search-results.css">
+    <title>Details Output</title>
+</head>
+<body>
+    <h1>Search Results : <%= searchFind.length %> found</h1>
+    
+    <% searchFind.forEach(student => { %>
+        <ul class="student-details">
+            <li><strong>First Name:</strong> <%= student.first_name %></li>
+            <li><strong>Last Name:</strong> <%= student.last_name %></li>
+            <li><strong>Age:</strong> <%= student.age %></li>
+            <li><strong>School Name:</strong> <%= student.school_name %></li>
+            <li><strong>Department Name:</strong> <%= student.department_name %></li>
+            <li><strong>Level:</strong> <%= student.level %></li>
+            <li><strong>Matric/No:</strong> <%= student.matric_no %></li>
+            <li><strong>Company Name:</strong> <%= student.company_name %></li>
+            <li><strong>Company Address:</strong> <%= student.company_location %></li>
+            <li><strong>Course Form:</strong>
+                <% if (student.file_path) { %>
+                    <a href="/<%= student.file_path %>" target="_blank">View File</a>
+                <% } else { %>
+                    <p>No file uploaded yet.</p>
+                <% } %>
+            </li>
+
+            <li><strong>Date Started:</strong> <%= student.date_started.toDateString ? student.date_started.toDateString() : student.date_started %></li>
+            <li><strong>Date Ended:</strong> <%= student.date_ended.toDateString ? student.date_ended.toDateString() : student.date_ended %></li>
+        </ul>
+    <% }) %>
+
+    <a href="/home">
+        <button>Go back to home page</button>
+    </a>
+</body>
+</html>

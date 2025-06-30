@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ancizar+Serif:ital,wght@0,300..900;1,300..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/99bfa07230.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/login-page.css">
+    <title>Log in Page</title>
+</head>
+<body>
+    <img src="/image/babcock-university-logo.png" alt="babcock logo">
+    <h1>Welcome to the login page</h1>
+    <form action="/login" method="post">
+        <div class="form-group">
+            <label for="matric-no">Matric/No:</label>
+            <input type="text" id="matric-no" name="matricNo" placeholder="22/0001">
+        </div>
+        
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password">
+        </div>
+        
+        <button type="submit">Login</button>
+        <p>To sign up please click <i class="fa-solid fa-arrow-right"></i> <a href="/signup">Sign up</a></p>
+    </form>
+</body>
+</html>
